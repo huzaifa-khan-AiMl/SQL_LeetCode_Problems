@@ -8,7 +8,9 @@
 -- every person, even if they don't have an address.
 -- If a person has no matching address, city and state become NULL.
 --
--- Time Complexity: O(n)
+-- Query Behavior: LEFT JOIN preserves all Person rows.
+-- Unmatched rows return NULL for city and state automatically.
+-- Join condition uses foreign key (Address.personId), not addressId.
 
 SELECT
     firstName,
